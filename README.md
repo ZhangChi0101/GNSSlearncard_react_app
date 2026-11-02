@@ -1,46 +1,32 @@
-Generated with [vike.dev/new](https://vike.dev/new) ([version 688](https://www.npmjs.com/package/create-vike/v/0.0.688)) using this command:
+# React + TypeScript + Vite
 
-```sh
-npm create vike@latest --- --react
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
 ```
 
-## Contents
-
-- [Vike](#vike)
-  - [Plus files](#plus-files)
-  - [Routing](#routing)
-  - [SSR](#ssr)
-  - [HTML Streaming](#html-streaming)
-
-## Vike
-
-This app is ready to start. It's powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
-
-### Plus files
-
-[The + files are the interface](https://vike.dev/config) between Vike and your code.
-
-- [`+config.ts`](https://vike.dev/settings) — Settings (e.g. `<title>`)
-- [`+Page.tsx`](https://vike.dev/Page) — The `<Page>` component
-- [`+data.ts`](https://vike.dev/data) — Fetching data (for your `<Page>` component)
-- [`+Layout.tsx`](https://vike.dev/Layout) — The `<Layout>` component (wraps your `<Page>` components)
-- [`+Head.tsx`](https://vike.dev/Head) - Sets `<head>` tags
-- [`/pages/_error/+Page.tsx`](https://vike.dev/error-page) — The error page (rendered when an error occurs)
-- [`+onPageTransitionStart.ts`](https://vike.dev/onPageTransitionStart) and `+onPageTransitionEnd.ts` — For page transition animations
-
-### Routing
-
-[Vike's built-in router](https://vike.dev/routing) lets you choose between:
-
-- [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
-- [Route Strings](https://vike.dev/route-string)
-- [Route Functions](https://vike.dev/route-function)
-
-### SSR
-
-SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all or specific pages.
-
-### HTML Streaming
-
-You can [enable/disable HTML streaming](https://vike.dev/stream) for all or specific pages.
-
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
