@@ -10,7 +10,7 @@ Der **GNSS Vokabeltrainer** ist eine webbasierte Lernanwendung, die sich an Stud
 * Fachpersonal im Bereich GIS und Satellitennavigation.
 
 ## Technische Umsetzung & Architektur
-Die Anwendung wurde modular mit **React** und modernen Hooks umgesetzt[cite: 13]:
+Die Anwendung wurde modular mit **React** und modernen Hooks umgesetzt:
 * **Komponentenstruktur:**
   * `Header.tsx`: Titel und Kurzbeschreibung.
   * `ControlBar.tsx`: Suchfeld und Filter-Leiste (Boxen 1–5).
